@@ -1,6 +1,10 @@
+/*
+Depends on curl
+Needs the other file in the directory to be compiled
+*/
 #include <stdio.h>
 #include <curl/curl.h>
-#define IP "http://192.168.43.188"
+#define IP "http://192.168.43.188" //the address of the server hosting the site
 struct string {
   char *ptr;
   size_t len;

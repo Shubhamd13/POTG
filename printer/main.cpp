@@ -1,4 +1,10 @@
 /*
+
+Compile with the outfile named man.exe 
+Depends on Windows PrintGDI API
+
+Following are some structures and function from API that were used :
+
 typedef struct _DOC_INFO_1 {
   LPTSTR pDocName;          Pointer to a null-terminated string that specifies the name of the document.
   LPTSTR pOutputFile;       Pointer to a null-terminated string that specifies the name of an output file. To print to a printer, set this to NULL
