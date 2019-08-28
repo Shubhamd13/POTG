@@ -1,0 +1,24 @@
+CREATE TABLE `print` (
+`firstname` varchar(30) NOT NULL,
+`password` varchar(50) NOT NULL,
+`phone` int(50) NOT NULL,
+PRIMARY KEY (`phone`)
+) ;
+CREATE TABLE `files` (
+`filename` varchar(50) NOT NULL,
+`size` int(100) DEFAULT NULL,
+`tmp_name` varchar(100) DEFAULT NULL,
+`type` varchar(100) DEFAULT NULL,
+`isprinted` int(2) DEFAULT NULL,
+PRIMARY KEY (`filename`)
+) ;
+CREATE TABLE `uploads` (
+`filename` varchar(100) DEFAULT NULL,
+`phone` int(100) DEFAULT NULL,
+KEY `filename` (`filename`),
+KEY `phone` (`phone`),
+CONSTRAINT `fk_name1` FOREIGN KEY (`filename`) REFERENCES
+`files` (`filename`) ON DELETE CASCADE,
+CONSTRAINT `fk_name2` FOREIGN KEY (`phone`) REFERENCES `print`
+(`phone`) ON DELETE CASCADE
+) ;
